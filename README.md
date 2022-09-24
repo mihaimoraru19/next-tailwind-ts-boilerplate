@@ -1,8 +1,4 @@
-# Boilerplate and Starter for Next JS 12+, Tailwind CSS 3 and TypeScript [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
-
-<p align="center">
-  <a href="https://creativedesignsguru.com/demo/Nextjs-Boilerplate/"><img src="public/assets/images/nextjs-starter-banner.png?raw=true" alt="Next js starter banner"></a>
-</p>
+# Boilerplate and Starter for Next JS 12+, Tailwind CSS 3 and TypeScript + (Redux Toolkit, i18n)
 
 🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, PostCSS, Tailwind CSS.
 
@@ -31,6 +27,9 @@ Developer experience first:
 - 🌈 Include a FREE minimalist theme
 - 💯 Maximize lighthouse score
 
+- 📦 [Redux Toolkit](https://redux-toolkit.js.org) for state management
+- 🌍 [react-intl](https://formatjs.io/docs/react-intl) for internationalization
+
 Built-in feature from Next.js:
 
 - ☕ Minify HTML & CSS
@@ -43,20 +42,6 @@ Built-in feature from Next.js:
 - SEO-friendly
 - 🚀 Production-ready
 
-### Nextless.js SaaS Boilerplate
-
-Build your SaaS product faster with [React SaaS Boilerplate](https://nextlessjs.com).
-
-[![React SaaS Boilerplate Next.js](https://creativedesignsguru.com/assets/images/themes/next-js-saas-starter-kit.jpg)](https://nextlessjs.com)
-
-### Premium Themes
-
-| [Green Nextjs Landing Page Template](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [Purple Saas Nextjs Theme](https://creativedesignsguru.com/landing-purple-modern-react-theme/) |
-| --- | --- |
-| [![Green Nextjs Landing Page Template](https://creativedesignsguru.com/assets/images/themes/landing-green-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [![Blue Landing Page Nextjs Theme](https://creativedesignsguru.com/assets/images/themes/landing-blue-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-blue-modern-react-theme/) |
-
-Find more [Nextjs Themes](https://creativedesignsguru.com/category/nextjs/).
-
 ### Requirements
 
 - Node.js 14+ and npm
@@ -66,7 +51,7 @@ Find more [Nextjs Themes](https://creativedesignsguru.com/category/nextjs/).
 Run the following command on your local environment:
 
 ```shell
-git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
+git clone --depth=1 https://github.com/mihaimoraru19/next-tailwind-ts-boilerplate my-project-name
 cd my-project-name
 npm install
 ```
@@ -85,12 +70,14 @@ Open http://localhost:3000 with your favorite browser to see your project.
 ├── __mocks__                       # Mocks for testing
 ├── .github                         # GitHub folder
 ├── .husky                          # Husky configuration
-├── .vscode                         # VSCode configuration
+├── .idea                           # IntelliJ IDEA configuration
 ├── public                          # Public assets folder
 ├── src
+│   ├── api                         # Only an axios authentication interceptor
+│   ├── i18n                        # JSON files for i18n through react-intl
 │   ├── layouts                     # Layouts components
 │   ├── pages                       # Next JS Pages
-│   ├── pages.test                  # Next JS Pages tests (this avoid test to treated as a Next.js pages)
+│   ├── store                       # Redux Toolkit store with template slice
 │   ├── styles                      # Styles folder
 │   ├── templates                   # Default template
 │   └── utils                       # Utility functions
@@ -134,25 +121,13 @@ All tests are colocated with the source code inside the same directory. So, it m
 
 Clone this repository on own GitHub account and deploy to Netlify:
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-js-Boilerplate)
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mihaimoraru19/next-tailwind-ts-boilerplate)
 
 ### Deploy to Vercel
 
 Deploy this Next JS Boilerplate on Vercel in one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fixartz%2FNext-js-Boilerplate)
-
-### VSCode information (optional)
-
-If you are VSCode users, you can have a better integration with VSCode by installing the suggested extension in `.vscode/extension.json`. The starter code comes up with Settings for a seamless integration with VSCode. The Debug configuration is also provided for frontend and backend debugging experience.
-
-With the plugins installed on your VSCode, ESLint and Prettier can automatically fix the code and show you the errors. Same goes for testing, you can install VSCode Jest extension to automatically run your tests and it also show the code coverage in context.
-
-Pro tips: if you need a project wide type checking with TypeScript, you can run a build with <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> on Mac.
-
-### Contributions
-
-Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/mihaimoraru19/next-tailwind-ts-boilerplate)
 
 ### License
 
@@ -162,6 +137,6 @@ See [LICENSE](LICENSE) for more information.
 
 ---
 
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+### Disclaimer
 
-[![React SaaS Boilerplate](https://creativedesignsguru.com/assets/images/themes/next-js-saas-starter-kit.jpg)](https://nextlessjs.com)
+Forked from [ixartz / Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) and modified to my needs. It is a boilerplate that I use to bootstrap new ideas and projects. I hope it will be useful for you too.
